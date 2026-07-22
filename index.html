@@ -98,7 +98,7 @@
   .section-head .eyebrow{display:block;}
   .section-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-top:0.6rem;}
 
-  /* ---------- Team: breiterer Container, gr\u00f6\u00dfere/breitere Bilder ---------- */
+  /* ---------- Team ---------- */
   .team-wrap{max-width:1400px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
   .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
   @media (max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);gap:2rem;} }
@@ -122,9 +122,10 @@
   .price-row .price{font-family:'Source Serif 4',Georgia,serif;color:var(--ink-soft);white-space:nowrap;}
   .price-note{text-align:center;color:var(--ink-faint);font-size:0.82rem;margin-top:2rem;}
 
-  /* ---------- Gallery (4 x 3) ---------- */
-  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;}
-  @media (max-width:640px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+  /* ---------- Gallery: 5 Spalten ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.7rem;}
+  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:600px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
   .gallery-grid .g-frame{overflow:hidden;aspect-ratio:1/1;}
   .gallery-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease;}
   .gallery-grid .g-frame:hover img{transform:scale(1.08);filter:grayscale(0%);}
@@ -308,21 +309,21 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Impressionen</span>
-        <h2>Der Salon</h2>
+        <h2>Unsere Arbeit</h2>
       </div>
       <div class="gallery-grid reveal">
-        <div class="g-frame"><img src="foto1.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto2.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto3.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto4.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto5.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto6.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto7.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto8.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto9.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto10.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto11.png" alt="Salon" loading="lazy"></div>
-        <div class="g-frame"><img src="foto12.png" alt="Salon" loading="lazy"></div>
+        <div class="g-frame"><img src="foto1.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto2.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto3.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto4.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto5.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto6.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto7.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto8.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto9.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto10.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto11.png" alt="Frisur Ergebnis" loading="lazy"></div>
+        <div class="g-frame"><img src="foto12.png" alt="Frisur Ergebnis" loading="lazy"></div>
       </div>
     </div>
   </section>
