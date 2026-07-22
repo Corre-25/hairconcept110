@@ -98,19 +98,19 @@
   .section-head .eyebrow{display:block;}
   .section-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-top:0.6rem;}
 
-  /* ---------- Team ---------- */
-  .team-wrap{max-width:1400px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
-  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
-  @media (max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);gap:2rem;} }
+  /* ---------- Team: breiterer Container, gr\u00f6\u00dfere Bilder ---------- */
+  .team-wrap{max-width:1600px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;}
+  @media (max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);gap:1.75rem;} }
   @media (max-width:520px){ .team-grid{grid-template-columns:1fr;} }
   .team-card{text-align:center;}
   .team-card .frame{overflow:hidden;margin-bottom:1.3rem;transition:box-shadow .5s ease;}
   .team-card .frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .6s ease;}
   .team-card:hover .frame{box-shadow:0 24px 50px rgba(14,12,10,0.16);}
   .team-card:hover .frame img{transform:scale(1.08);filter:grayscale(0%);}
-  .team-card h3{font-weight:500;font-size:1.2rem;margin-bottom:0.2rem;}
-  .team-card .role{display:block;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;color:var(--ink-faint);margin-bottom:0.5rem;}
-  .team-card .spec{font-size:0.88rem;color:var(--ink-soft);line-height:1.5;}
+  .team-card h3{font-weight:500;font-size:1.25rem;margin-bottom:0.2rem;}
+  .team-card .role{display:block;text-transform:uppercase;letter-spacing:0.1em;font-size:0.72rem;color:var(--ink-faint);margin-bottom:0.5rem;}
+  .team-card .spec{font-size:0.9rem;color:var(--ink-soft);line-height:1.5;}
 
   /* ---------- Services ---------- */
   .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:960px;margin:0 auto;}
@@ -127,7 +127,7 @@
   .gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
   @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(2,1fr);gap:0.6rem;} }
   .gallery-grid .g-frame{overflow:hidden;aspect-ratio:1/1;}
-  .gallery-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease;cursor:zoom-in;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease;cursor:pointer;}
   .gallery-grid .g-frame:hover img{transform:scale(1.08);filter:grayscale(0%);}
 
   /* ---------- Lightbox ---------- */
