@@ -122,10 +122,10 @@
   .price-row .price{font-family:'Source Serif 4',Georgia,serif;color:var(--ink-soft);white-space:nowrap;}
   .price-note{text-align:center;color:var(--ink-faint);font-size:0.82rem;margin-top:2rem;}
 
-  /* ---------- Gallery: 5 Spalten ---------- */
-  .gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0.7rem;}
-  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(3,1fr);} }
-  @media (max-width:600px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+  /* ---------- Gallery: breiter Container (~90% Bildschirmbreite), 5 gro\u00dfe Spalten ---------- */
+  .gallery-wrap{width:90%;max-width:1900px;margin:0 auto;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
+  @media (max-width:900px){ .gallery-grid{grid-template-columns:repeat(2,1fr);gap:0.6rem;} }
   .gallery-grid .g-frame{overflow:hidden;aspect-ratio:1/1;}
   .gallery-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease;}
   .gallery-grid .g-frame:hover img{transform:scale(1.08);filter:grayscale(0%);}
@@ -306,7 +306,7 @@
   </section>
 
   <section>
-    <div class="wrap">
+    <div class="gallery-wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Impressionen</span>
         <h2>Unsere Arbeit</h2>
@@ -322,8 +322,6 @@
         <div class="g-frame"><img src="foto8.png" alt="Frisur Ergebnis" loading="lazy"></div>
         <div class="g-frame"><img src="foto9.png" alt="Frisur Ergebnis" loading="lazy"></div>
         <div class="g-frame"><img src="foto10.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto11.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto12.png" alt="Frisur Ergebnis" loading="lazy"></div>
       </div>
     </div>
   </section>
