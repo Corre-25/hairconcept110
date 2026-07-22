@@ -72,19 +72,26 @@
   .scroll-cue .line::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--on-dark);animation:scrollLine 2.2s ease-in-out infinite;}
   @keyframes scrollLine{0%{top:-100%;}60%{top:100%;}100%{top:100%;}}
 
-  /* ---------- CTA Banner: harter Schwarz-Block, kein Verlauf ---------- */
+  /* ---------- CTA Banner ---------- */
   .cta-banner{background:var(--ink);color:var(--on-dark);text-align:center;}
   .cta-banner .eyebrow{display:block;color:var(--on-dark-soft);}
   .cta-banner h2{font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.25;margin:0.8rem auto 1.4rem auto;max-width:16ch;}
   .cta-banner p{color:#D6D2C8;max-width:46ch;margin:0 auto 2.2rem auto;line-height:1.75;}
   .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
-  /* ---------- Philosophy ---------- */
-  .philosophy{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-  .philosophy img{width:100%;height:420px;object-fit:cover;filter:grayscale(20%);}
-  .philosophy h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:0.7rem 0 1.2rem 0;line-height:1.3;}
-  .philosophy p{color:var(--ink-soft);line-height:1.8;font-size:1.02rem;margin-bottom:1rem;}
-  @media (max-width:820px){ .philosophy{grid-template-columns:1fr;} .philosophy img{height:280px;order:-1;} }
+  /* ---------- Philosophy: Bild randabschneidend rechts ---------- */
+  #philosophie{padding-top:0;padding-bottom:0;}
+  .philosophy{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:stretch;min-height:560px;}
+  .philosophy-img{overflow:hidden;}
+  .philosophy-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);}
+  .philosophy-text{padding:clamp(3rem,6vw,5rem) clamp(2rem,4vw,3.5rem) clamp(3rem,6vw,5rem) var(--pad);display:flex;flex-direction:column;justify-content:center;}
+  .philosophy-text h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:0.7rem 0 1.2rem 0;line-height:1.3;}
+  .philosophy-text p{color:var(--ink-soft);line-height:1.8;font-size:1.02rem;margin-bottom:1rem;}
+  @media (max-width:820px){
+    .philosophy{grid-template-columns:1fr;min-height:auto;}
+    .philosophy-img img{height:280px;}
+    .philosophy-text{padding:2.5rem var(--pad);}
+  }
 
   /* ---------- Section headings ---------- */
   .section-head{text-align:center;margin-bottom:2.5rem;}
@@ -121,18 +128,24 @@
   .gallery-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease;}
   .gallery-grid .g-frame:hover img{transform:scale(1.08);filter:grayscale(0%);}
 
-  /* ---------- NEWSHA ---------- */
-  .newsha{background:var(--ink);color:var(--on-dark);}
-  .newsha-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;}
-  @media (max-width:820px){ .newsha-inner{grid-template-columns:1fr;} }
-  .newsha-inner img{width:100%;height:340px;object-fit:cover;filter:grayscale(25%);}
-  .newsha-text{text-align:left;}
+  /* ---------- NEWSHA: Bild randabschneidend links ---------- */
+  .newsha{background:var(--ink);color:var(--on-dark);padding-top:0;padding-bottom:0;}
+  .newsha-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:stretch;min-height:560px;}
+  .newsha-img{overflow:hidden;}
+  .newsha-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%);}
+  .newsha-text{padding:clamp(3rem,6vw,5rem) var(--pad) clamp(3rem,6vw,5rem) clamp(2rem,4vw,3.5rem);display:flex;flex-direction:column;justify-content:center;}
   .newsha .eyebrow{display:block;color:var(--on-dark-soft);}
   .newsha h2{font-size:clamp(2rem,4vw,2.6rem);margin:0.7rem 0 1rem 0;}
   .newsha p{color:#D6D2C8;max-width:46ch;margin:0 0 1.6rem 0;line-height:1.75;}
+  .newsha .btn{align-self:flex-start;}
   .newsha .btn .arrow{display:inline-block;transition:transform .3s ease;margin-left:0.4rem;}
   .newsha .btn:hover .arrow{transform:translateX(6px);}
   .newsha .disclaimer{margin-top:1.2rem;font-size:0.7rem;color:#7A7466;}
+  @media (max-width:820px){
+    .newsha-inner{grid-template-columns:1fr;min-height:auto;}
+    .newsha-img img{height:320px;}
+    .newsha-text{padding:2.5rem var(--pad);}
+  }
 
   /* ---------- Contact ---------- */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
@@ -201,14 +214,14 @@
   </section>
 
   <section id="philosophie">
-    <div class="wrap philosophy reveal">
-      <div>
+    <div class="philosophy reveal">
+      <div class="philosophy-text">
         <span class="eyebrow">Was uns wichtig ist</span>
         <h2>Handwerk, dem man vertraut.</h2>
         <p>Uns interessiert nicht der schnellste Trend, sondern das Ergebnis, das Sie sich wirklich wünschen. Wir hören zu, beraten ehrlich und sagen auch mal, was nicht funktioniert — bevor wir schneiden oder färben.</p>
         <p>Viele unserer Kundinnen und Kunden kommen seit Jahren zu uns. Das ist für uns das eigentliche Kompliment: nicht der einzelne Schnitt, sondern das Vertrauen, das daraus entsteht.</p>
       </div>
-      <img src="about.png" alt="Salon Detail" loading="lazy">
+      <div class="philosophy-img"><img src="about.png" alt="Salon Detail" loading="lazy"></div>
     </div>
   </section>
 
@@ -315,8 +328,8 @@
   </section>
 
   <section id="newsha" class="newsha">
-    <div class="wrap newsha-inner reveal">
-      <img src="newsha.png" alt="NEWSHA Produkte" loading="lazy">
+    <div class="newsha-inner reveal">
+      <div class="newsha-img"><img src="newsha.png" alt="NEWSHA Produkte" loading="lazy"></div>
       <div class="newsha-text">
         <span class="eyebrow">Unser Partner</span>
         <h2>NEWSHA — Pflege für zuhause.</h2>
