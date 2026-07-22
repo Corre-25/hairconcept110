@@ -1,421 +1,207 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.s1 {font: 12.0px 'Hiragino Sans'}
-    span.s2 {font: 12.0px 'Lucida Grande'}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum — Hairconcept 110</title>
+<style>
+  @font-face{font-family:'Source Serif 4';src:url('fonts/source-serif-4-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Source Serif 4';src:url('fonts/source-serif-4-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Source Serif 4';src:url('fonts/source-serif-4-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Work Sans';src:url('fonts/work-sans-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Work Sans';src:url('fonts/work-sans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Work Sans';src:url('fonts/work-sans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+  @font-face{font-family:'Work Sans';src:url('fonts/work-sans-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+
+  :root{
+    --ink:#0E0C0A;--ink-soft:#57534B;--ink-faint:#8B8579;--paper:#F6F5F2;--line:#DBD6CC;
+    --on-dark:#F1EFEA;--on-dark-soft:#ABA598;--max:1200px;--pad: clamp(1.5rem, 5vw, 4.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:'Work Sans', Arial, sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  h1,h2{font-family:'Source Serif 4', Georgia, serif;font-weight:500;}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(14,12,10,0.72);backdrop-filter:blur(10px);}
+  .header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:1rem var(--pad);width:100%;}
+  nav.main-nav{display:flex;gap:clamp(1.6rem,3vw,3rem);}
+  nav.main-nav a{text-decoration:none;font-size:0.85rem;color:var(--on-dark-soft);position:relative;padding-bottom:2px;transition:color .3s ease;white-space:nowrap;}
+  nav.main-nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--on-dark);transition:width .35s ease;}
+  nav.main-nav a:hover{color:var(--on-dark);}
+  nav.main-nav a:hover::after{width:100%;}
+
+  .nav-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;line-height:0;}
+  .nav-logo img{display:block;height:20px;width:auto;}
+
+  .nav-toggle{display:none;position:relative;width:26px;height:16px;background:none;border:none;cursor:pointer;padding:0;z-index:201;flex-shrink:0;}
+  .nav-toggle span{position:absolute;left:0;width:100%;height:1px;background:var(--on-dark-soft);transition:top .3s ease, transform .35s ease, background .3s ease;}
+  .nav-toggle span:first-child{top:0;}
+  .nav-toggle span:last-child{top:15px;}
+  .nav-toggle:hover span{background:var(--on-dark);}
+  .nav-toggle.active span:first-child{top:7px;transform:rotate(45deg);}
+  .nav-toggle.active span:last-child{top:7px;transform:rotate(-45deg);}
+
+  .nav-cta{flex-shrink:0;}
+  .nav-cta .btn{padding:0.6rem 1.15rem;font-size:0.8rem;}
+
+  @media (max-width:1100px){
+    nav.main-nav{display:none;}
+    .nav-toggle{display:block;}
+    .nav-cta{display:none;}
+  }
+
+  .btn{display:inline-block;font-size:0.92rem;text-decoration:none;padding:0.85rem 1.7rem;border:1px solid currentColor;cursor:pointer;transition:transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease;white-space:nowrap;font-weight:500;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.16);}
+  .btn-fill{background:var(--on-dark);color:var(--ink);border-color:var(--on-dark);}
+  .btn-fill:hover{background:transparent;color:var(--on-dark);}
+
+  .mobile-menu{position:fixed;inset:0;background:var(--ink);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .4s ease, transform .4s ease, visibility 0s linear .4s;}
+  .mobile-menu.active{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .4s ease, transform .4s ease, visibility 0s linear 0s;}
+  .mobile-menu a{font-family:'Source Serif 4',Georgia,serif;font-size:clamp(1.6rem,5.5vw,2.2rem);color:var(--on-dark);text-decoration:none;opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease;}
+  .mobile-menu.active a{opacity:1;transform:translateY(0);}
+  .mobile-menu.active a:nth-child(1){transition-delay:.06s;}
+  .mobile-menu.active a:nth-child(2){transition-delay:.12s;}
+  .mobile-menu.active a:nth-child(3){transition-delay:.18s;}
+  .mobile-menu.active a:nth-child(4){transition-delay:.24s;}
+  .mobile-menu.active a:nth-child(5){transition-delay:.3s;}
+
+  .legal{max-width:720px;margin:0 auto;padding:0 var(--pad);}
+  main{padding:clamp(7.5rem,13vw,9.5rem) 0 5rem 0;}
+  .eyebrow{text-transform:uppercase;letter-spacing:0.2em;font-size:0.72rem;font-weight:600;color:var(--ink-faint);display:block;}
+  .legal h1{font-size:clamp(1.9rem,3.6vw,2.4rem);margin:0.6rem 0 2.2rem 0;}
+  .legal h2{font-size:1.1rem;font-weight:500;margin:2rem 0 0.6rem 0;}
+  .legal p{color:var(--ink-soft);line-height:1.8;font-size:1rem;margin-bottom:0.6rem;}
+
+  footer{background:var(--ink);color:var(--on-dark-soft);padding:2.5rem var(--pad) 2rem var(--pad);}
+  .footer-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+  .footer-inner img{height:20px;}
+  .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+  .footer-links a{text-decoration:none;font-size:0.85rem;transition:color .3s ease;}
+  .footer-links a:hover{color:var(--on-dark);}
+  .footer-bottom{max-width:var(--max);margin:1.6rem auto 0 auto;padding-top:1.2rem;border-top:1px solid #211E1A;font-size:0.75rem;color:#6E6A60;}
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="de"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Hairconcept 110 — Friseursalon in Kuchen&lt;/title&gt;</p>
-<p class="p1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--ink:#0E0C0A;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--ink-soft:#57534B;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--ink-faint:#8B8579;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--paper:#F6F5F2;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--paper-dim:#ECEAE4;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--line:#DBD6CC;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--panel-soft:#A79FEE00;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--on-dark:#F1EFEA;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--on-dark-soft:#ABA598;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--max:1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--pad: clamp(1.5rem, 5vw, 4.5rem);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>*{box-sizing:border-box;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>html{scroll-behavior:smooth;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body{margin:0;background:var(--paper);color:var(--ink);font-family:'Work Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>img{display:block;max-width:100%;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>a{color:inherit;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>::selection{background:var(--ink);color:var(--paper);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>a:focus-visible, button:focus-visible{outline:2px solid currentColor;outline-offset:4px;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.eyebrow{text-transform:uppercase;letter-spacing:0.22em;font-size:0.72rem;font-weight:600;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>section{padding:clamp(4.5rem,9vw,7rem) 0;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* Reveal on scroll */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease, transform .9s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.reveal.in-view{opacity:1;transform:translateY(0);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Sticky Nav ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,12,10,0.72);backdrop-filter:blur(10px);transition:background .4s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.header-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1rem var(--pad);max-width:var(--max);margin:0 auto;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>nav.main-nav{display:flex;gap:2rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>nav.main-nav a{text-decoration:none;font-size:0.82rem;color:var(--on-dark-soft);position:relative;padding-bottom:2px;transition:color .3s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>nav.main-nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--on-dark);transition:width .35s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>nav.main-nav a:hover{color:var(--on-dark);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>nav.main-nav a:hover::after{width:100%;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.nav-logo{height:20px;width:auto;justify-self:center;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.nav-cta{justify-self:end;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:860px){ nav.main-nav{display:none;} .header-inner{grid-template-columns:1fr auto;} }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn{display:inline-block;font-size:0.78rem;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;padding:0.85rem 1.6rem;border:1px solid currentColor;cursor:pointer;transition:transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease;white-space:nowrap;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.18);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-fill{background:var(--on-dark);color:var(--ink);border-color:var(--on-dark);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-fill:hover{background:transparent;color:var(--on-dark);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-ink:hover{background:transparent;color:var(--ink);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.btn-line-ink{color:var(--ink);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* Floating mobile-ish CTA */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.floating-cta{position:fixed;right:1.4rem;bottom:1.4rem;z-index:90;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .5s ease, transform .5s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.floating-cta.show{opacity:1;transform:translateY(0);pointer-events:auto;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.floating-cta .btn{box-shadow:0 12px 30px rgba(0,0,0,0.25);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Hero ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--ink);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(55%) brightness(0.75);animation:heroZoom 24s ease-in-out infinite alternate;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.09);}}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(14,12,10,0.35) 0%, rgba(14,12,10,0.55) 55%, rgba(14,12,10,0.92) 100%);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-content{position:relative;z-index:2;color:var(--on-dark);padding:0 1.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-content img.logo{height:78px;width:auto;margin:0 auto 2rem auto;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.5));}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-content .eyebrow{color:var(--on-dark-soft);margin-bottom:0.9rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-content .tagline{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:clamp(1.2rem,2.4vw,1.6rem);color:#DCD8CE;margin:0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.trust{margin-top:2.2rem;font-size:0.8rem;color:var(--on-dark-soft);letter-spacing:0.04em;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.scroll-cue{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--on-dark-soft);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.scroll-cue span{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.2em;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.scroll-cue .line{width:1px;height:34px;background:var(--on-dark-soft);position:relative;overflow:hidden;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.scroll-cue .line::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--on-dark);animation:scrollLine 2.2s ease-in-out infinite;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@keyframes scrollLine{0%{top:-100%;}60%{top:100%;}100%{top:100%;}}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Fade transition dark -&gt; light ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.fade-transition{height:clamp(120px,18vw,220px);background:linear-gradient(180deg, var(--ink) 0%, var(--paper) 100%);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- CTA Booking Banner ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta-banner{background:var(--ink);color:var(--on-dark);text-align:center;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta-banner .eyebrow{color:var(--on-dark-soft);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta-banner h2{font-family:'Fraunces',serif;font-weight:400;font-style:italic;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.25;margin:0.8rem 0 1.4rem 0;max-width:16ch;margin-left:auto;margin-right:auto;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta-banner p{color:#D6D2C8;max-width:46ch;margin:0 auto 2.2rem auto;line-height:1.75;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Philosophy ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.philosophy{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.philosophy img{width:100%;height:420px;object-fit:cover;filter:grayscale(20%);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.philosophy h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.7rem,3vw,2.3rem);margin:0.7rem 0 1.2rem 0;line-height:1.3;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.philosophy p{color:var(--ink-soft);line-height:1.8;font-size:1.02rem;margin:0 0 1rem 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:820px){ .philosophy{grid-template-columns:1fr;} .philosophy img{height:280px;order:-1;} }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Team ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section-head{text-align:center;margin-bottom:2.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section-head h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,2.6rem);margin:0.6rem 0 0 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-banner{width:100%;max-height:360px;object-fit:cover;object-position:top;margin-bottom:3rem;filter:grayscale(20%);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);} }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:520px){ .team-grid{grid-template-columns:1fr;} }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card{text-align:center;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card .frame{overflow:hidden;margin-bottom:1rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card .frame img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;filter:grayscale(15%);transition:transform .7s cubic-bezier(.2,.7,.2,1), filter .5s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card:hover .frame img{transform:scale(1.07);filter:grayscale(0%);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card h3{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:1.15rem;margin:0 0 0.2rem 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card .role{text-transform:uppercase;letter-spacing:0.1em;font-size:0.68rem;color:var(--ink-faint);margin-bottom:0.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.team-card .spec{font-size:0.85rem;color:var(--ink-soft);line-height:1.5;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Services ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:960px;margin:0 auto;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:760px){ .price-grid{grid-template-columns:1fr;} }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-cat{margin-bottom:2.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-cat h3{text-transform:uppercase;letter-spacing:0.16em;font-size:0.8rem;font-weight:600;border-bottom:1px solid var(--ink);padding-bottom:0.5rem;margin:0 0 1rem 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-row{display:flex;justify-content:space-between;gap:1rem;padding:0.65rem 0;border-bottom:1px dotted var(--line);font-size:0.95rem;transition:padding-left .35s ease, color .35s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-row:hover{padding-left:0.5rem;color:var(--ink-soft);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-row .price{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);white-space:nowrap;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.price-note{text-align:center;color:var(--ink-faint);font-size:0.82rem;margin-top:2rem;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Gallery ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.gallery-grid .g-frame{overflow:hidden;height:260px;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.gallery-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.gallery-grid .g-frame:hover img{transform:scale(1.08);filter:grayscale(0%);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- NEWSHA Partner Banner ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha{background:var(--ink);color:var(--on-dark);text-align:center;position:relative;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha .eyebrow{color:var(--on-dark-soft);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2rem,4vw,2.8rem);margin:0.7rem 0 1rem 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha p{color:#D6D2C8;max-width:52ch;margin:0 auto 2rem auto;line-height:1.75;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha .btn{position:relative;overflow:hidden;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha .btn .arrow{display:inline-block;transition:transform .3s ease;margin-left:0.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha .btn:hover .arrow{transform:translateX(6px);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.newsha .disclaimer{margin-top:1.4rem;font-size:0.7rem;color:#77716454;letter-spacing:0.02em;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* ---------- Contact / Footer ---------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:820px){ .contact-grid{grid-template-columns:1fr;} }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.contact-grid h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.8rem,3.4vw,2.4rem);margin:0.6rem 0 1.2rem 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-block{margin-bottom:1.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-block h4{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-faint);margin:0 0 0.4rem 0;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.info-block p{margin:0;color:var(--ink-soft);line-height:1.7;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hours-row{display:flex;justify-content:space-between;max-width:280px;padding:0.35rem 0;font-size:0.92rem;border-bottom:1px dotted var(--line);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hours-row.closed span:last-child{color:var(--ink-faint);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>footer{background:var(--ink);color:var(--on-dark-soft);padding:2.5rem var(--pad) 2rem var(--pad);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer-inner img{height:20px;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer-links{display:flex;gap:1.5rem;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer-links a{text-decoration:none;font-size:0.78rem;transition:color .3s ease;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer-links a:hover{color:var(--on-dark);}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer-bottom{max-width:var(--max);margin:1.6rem auto 0 auto;padding-top:1.2rem;border-top:1px solid #211E1A;font-size:0.72rem;color:#6E6A60;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (prefers-reduced-motion: reduce){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{animation:none !important;transition:none !important;}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.reveal{opacity:1 !important;transform:none !important;}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;header id="siteHeader"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="main-nav"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#team"&gt;Team&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#leistungen"&gt;Leistungen&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#newsha"&gt;Newsha&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img class="nav-logo" src="https://www.dropbox.com/scl/fi/hvdkxulivvf4c5xk11kr5/hairconcept110_Logo_wei.svg?rlkey=tsde97rg1z9tl6egzvqqbhyxj&amp;raw=1" alt="Hairconcept 110"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.google.com/maps/place/Hairconcept+110" target="_blank" rel="noopener" class="btn btn-fill"&gt;Online Termin&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="floating-cta" id="floatingCta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="https://www.google.com/maps/place/Hairconcept+110" target="_blank" rel="noopener" class="btn btn-fill"&gt;Termin buchen&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img class="bg" src="https://www.dropbox.com/scl/fi/rxwba2wevus6a7vfen0sb/IMG_0931.JPG?rlkey=w3uh88zil0j51zccvuk8aoc6d&amp;raw=1" alt="Hairconcept 110 Salon"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="eyebrow"&gt;Friseursalon in Kuchen&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img class="logo" src="https://www.dropbox.com/scl/fi/hvdkxulivvf4c5xk11kr5/hairconcept110_Logo_wei.svg?rlkey=tsde97rg1z9tl6egzvqqbhyxj&amp;raw=1" alt="Hairconcept 110"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="tagline"&gt;Schnitt. Farbe. Präzision.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="trust"&gt;<span class="s1">★★★★★</span> 4,9 · 65 Google-Rezensionen&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="scroll-cue"&gt;&lt;span&gt;Scroll&lt;/span&gt;&lt;div class="line"&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="fade-transition"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="cta-banner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="eyebrow"&gt;Terminvereinbarung&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Ihr Termin, online in unter einer Minute.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Kein Anruf, keine Warteschleife — wählen Sie Ihre Leistung, Ihren Stylisten und Ihre Uhrzeit direkt online.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cta-btns"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.google.com/maps/place/Hairconcept+110" target="_blank" rel="noopener" class="btn btn-fill"&gt;Online Termin buchen&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="tel:+493319463318" class="btn" style="color:var(--on-dark);border-color:var(--on-dark-soft);"&gt;Lieber anrufen&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="philosophie"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap philosophy reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="eyebrow"&gt;Die Haltung&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Präzision ist die leiseste Form von Stil.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Bei Hairconcept 110 beginnt jeder Termin mit einem Gespräch — über Ihr Haar, Ihren Alltag, das, was Sie sich wünschen. Kein Trend um des Trends willen, sondern ein Ergebnis, das zu Ihnen passt.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Unser Team arbeitet mit ausgewählten Marken wie NEWSHA und legt genauso viel Wert auf die Beratung wie auf das Ergebnis.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://www.dropbox.com/scl/fi/jqblzfrfv260emj89gvr0/IMG_0944.JPG?rlkey=qql9goo56qwzccfqk7jwsln8g&amp;raw=1" alt="Salon Detail"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="team"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="eyebrow"&gt;Das Team&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Wer Ihr Haar in Händen hält&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img class="team-banner reveal" src="https://www.dropbox.com/scl/fi/jj1r9z8hrsp9243per5lr/IMG_0919.JPG?rlkey=1tub8azkpkl7474qkbw5984h7&amp;raw=1" alt="Team Hairconcept 110"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="team-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-card reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/im6x38t5pj50gy53q0cta/IMG_0896.JPG?rlkey=lo2fyhq45f34eme74twds10r4&amp;raw=1" alt="Sasa M."&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Sasa M.&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="role"&gt;Inhaber &amp;amp; Hairstylist&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="spec"&gt;Schnitt, Farbe &amp;amp; Typveränderung&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-card reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/m6250fevdwn75lznj8phf/IMG_0913.JPG?rlkey=ihrtskymxjmzwmkb4q3zuvcsk&amp;raw=1" alt="Dejan V."&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Dejan V.&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="role"&gt;Hairstylist&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="spec"&gt;Herrenschnitt &amp;amp; Styling&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-card reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/p7i8rdhb89hr438e5rsfe/IMG_0903.JPG?rlkey=tkbcd5xog1dgpbzffwyixperb&amp;raw=1" alt="Rafa"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Rafa&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="role"&gt;Hairstylistin&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="spec"&gt;Coloration &amp;amp; Balayage&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-card reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/72f38an5h3leaxt2b8ymi/IMG_0906.JPG?rlkey=82epb1wfkq5cizb65to8wxa0v&amp;raw=1" alt="Sarah"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Sarah&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="role"&gt;Hairstylistin&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="spec"&gt;Pflege &amp;amp; Naturlocken&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="leistungen"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="eyebrow"&gt;Die Karte&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Leistungen &amp;amp; Preise&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="price-grid reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="price-cat"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Cut&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Clipper Cut&lt;/span&gt;&lt;span class="price"&gt;33,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Short Cut (kurzes Haar)&lt;/span&gt;&lt;span class="price"&gt;51,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Most Lengths (mittellang)&lt;/span&gt;&lt;span class="price"&gt;56,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Over Length (langes Haar)&lt;/span&gt;&lt;span class="price"&gt;61,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Under 14's&lt;/span&gt;&lt;span class="price"&gt;ab 24,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Bartstyling&lt;/span&gt;&lt;span class="price"&gt;ab 18&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="price-cat"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Cut &amp;amp; Color&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Ansatzfarbe + Waschen + Schneiden + Föhnen&lt;/span&gt;&lt;span class="price"&gt;ab 102&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="price-cat"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Color&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Farbe&lt;/span&gt;&lt;span class="price"&gt;ab 48,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Tönung&lt;/span&gt;&lt;span class="price"&gt;ab 34&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Glossing&lt;/span&gt;&lt;span class="price"&gt;ab 26&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Blondierung&lt;/span&gt;&lt;span class="price"&gt;ab 40,50&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Strähnen&lt;/span&gt;&lt;span class="price"&gt;ab 38&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Balayage&lt;/span&gt;&lt;span class="price"&gt;ab 80&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="price-cat"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Perm&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Dauerwelle&lt;/span&gt;&lt;span class="price"&gt;ab 54&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="price-row"&gt;&lt;span class="name"&gt;Keratinglättung&lt;/span&gt;&lt;span class="price"&gt;ab 280&amp;nbsp;€&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="price-note reveal"&gt;Alle Preise verstehen sich als Richtwerte und variieren je nach Haarlänge und Aufwand.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="eyebrow"&gt;Impressionen&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Der Salon&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="gallery-grid reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="g-frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/ydpaq3vrlr8vg8wgjorgp/IMG_0922.JPG?rlkey=gr76fpihqvf34yhqjpcl68l0k&amp;raw=1" alt="Team"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="g-frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/ljuqod0hhe0ontdm2tcmo/IMG_0929.JPG?rlkey=lco5sbk8wivo45jiyinilyxxi&amp;raw=1" alt="Salon"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="g-frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/9ifemr4wnrh76svxl2kjw/IMG_0936.JPG?rlkey=4c0zt4rv7p4zpw706l0oeukra&amp;raw=1" alt="Salon"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="g-frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/t4jbi2opyzshsj8h4l1sw/IMG_0932.JPG?rlkey=n6508hw04xl3c76h7n9na9spr&amp;raw=1" alt="Salon"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="g-frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/sbdmmxk21txyccr0ks97k/IMG_0933.JPG?rlkey=3d30r0tmtq5oavkg9z67ii6dl&amp;raw=1" alt="Salon"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="g-frame"&gt;&lt;img src="https://www.dropbox.com/scl/fi/0ctm5sptwq3zxee999nhj/IMG_0950.JPG?rlkey=ndzip97041gktxptmzdxzjh0j&amp;raw=1" alt="Salon"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="newsha" class="newsha"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="eyebrow"&gt;Unser Partner&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;NEWSHA — Pflege für zuhause.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Die Produkte, die wir im Salon verwenden, gibt es jetzt auch für zuhause. Verlängern Sie Ihr Ergebnis mit den Pflegelinien, auf die auch wir vertrauen.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.newsha.com/" target="_blank" rel="noopener sponsored" class="btn btn-fill"&gt;Jetzt bei NEWSHA shoppen &lt;span class="arrow"&gt;<span class="s2">→</span>&lt;/span&gt;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="disclaimer"&gt;Affiliate-Link — als Partner von NEWSHA erhalten wir ggf. eine Provision, für Sie ändert sich am Preis nichts.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="kontakt"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap contact-grid reveal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="eyebrow"&gt;Termin&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Wir freuen uns auf Sie.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="info-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Adresse&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Hauptstraße 110&lt;br&gt;73329 Kuchen&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="info-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Telefon&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;a href="tel:+493319463318"&gt;07331 9463318&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.google.com/maps/dir/?api=1&amp;destination=Hauptstra%C3%9Fe+110,+73329+Kuchen" target="_blank" rel="noopener" class="btn btn-ink"&gt;Route planen&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="info-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Öffnungszeiten&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row"&gt;&lt;span&gt;Montag&lt;/span&gt;&lt;span&gt;09:00–18:00&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row"&gt;&lt;span&gt;Dienstag&lt;/span&gt;&lt;span&gt;09:00–18:00&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row closed"&gt;&lt;span&gt;Mittwoch&lt;/span&gt;&lt;span&gt;Geschlossen&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row"&gt;&lt;span&gt;Donnerstag&lt;/span&gt;&lt;span&gt;09:00–18:00&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row"&gt;&lt;span&gt;Freitag&lt;/span&gt;&lt;span&gt;09:00–18:00&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row"&gt;&lt;span&gt;Samstag&lt;/span&gt;&lt;span&gt;09:00–14:00&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hours-row closed"&gt;&lt;span&gt;Sonntag&lt;/span&gt;&lt;span&gt;Geschlossen&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://www.dropbox.com/scl/fi/hvdkxulivvf4c5xk11kr5/hairconcept110_Logo_wei.svg?rlkey=tsde97rg1z9tl6egzvqqbhyxj&amp;raw=1" alt="Hairconcept 110"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.instagram.com/hairconcept110/" target="_blank" rel="noopener"&gt;Instagram&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="tel:+493319463318"&gt;Anrufen&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer-bottom"&gt;© 2026 Hairconcept 110, Kuchen. Alle Preise verstehen sich als Richtwerte.&lt;/div&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Scroll reveal</p>
-<p class="p1"><span class="Apple-converted-space">  </span>(function(){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var els = document.querySelectorAll('.reveal');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var obs = new IntersectionObserver(function(entries){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>entries.forEach(function(entry){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(entry.isIntersecting){</p>
-<p class="p1"><span class="Apple-converted-space">          </span>entry.target.classList.add('in-view');</p>
-<p class="p1"><span class="Apple-converted-space">          </span>obs.unobserve(entry.target);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, { threshold: 0.15 });</p>
-<p class="p1"><span class="Apple-converted-space">    </span>els.forEach(function(el){ obs.observe(el); });</p>
-<p class="p1"><span class="Apple-converted-space">  </span>})();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>// Floating CTA appears after hero</p>
-<p class="p1"><span class="Apple-converted-space">  </span>(function(){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var hero = document.querySelector('.hero');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var floatingCta = document.getElementById('floatingCta');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>var obs = new IntersectionObserver(function(entries){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>entries.forEach(function(entry){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(!entry.isIntersecting){</p>
-<p class="p1"><span class="Apple-converted-space">          </span>floatingCta.classList.add('show');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>floatingCta.classList.remove('show');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, { threshold: 0 });</p>
-<p class="p1"><span class="Apple-converted-space">    </span>obs.observe(hero);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>})();</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<header>
+  <div class="header-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="index.html#termin">Termin</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#leistungen">Leistungen</a>
+      <a href="index.html#impressionen">Impressionen</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+    <a href="index.html#top" class="nav-logo" aria-label="Zur Startseite">
+      <img src="HClogo.svg" alt="Hairconcept 110">
+    </a>
+    <div class="nav-cta">
+      <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Online Termin</a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#termin">Termin</a>
+  <a href="index.html#team">Team</a>
+  <a href="index.html#leistungen">Leistungen</a>
+  <a href="index.html#impressionen">Impressionen</a>
+  <a href="index.html#kontakt">Kontakt</a>
+</div>
+
+<main>
+  <div class="legal">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Impressum</h1>
+
+    <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+
+    <p>[Vollständiger Vor- und Nachname des Inhabers]<br>
+    Hairconcept 110<br>
+    Hauptstraße 110<br>
+    73329 Kuchen</p>
+
+    <h2>Kontakt</h2>
+    <p>Telefon: <a href="tel:+493319463318">07331 9463318</a><br>
+    E-Mail: [geschäftliche E-Mail-Adresse]</p>
+
+    <h2>Umsatzsteuer-Identifikationsnummer</h2>
+    <p>gemäß § 27a UStG: [USt-IdNr., falls vorhanden]</p>
+
+    <h2>Handelsregister</h2>
+    <p>[Registergericht und Nummer, falls im Handelsregister eingetragen; andernfalls entfällt dieser Abschnitt]</p>
+
+    <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+    <p>Friseurhandwerk (zulassungspflichtiges Handwerk gemäß Anlage A der Handwerksordnung)<br>
+    Zuständige Kammer: [zuständige Handwerkskammer]<br>
+    Verliehen in: Deutschland</p>
+
+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p>[Name und Anschrift wie oben]</p>
+
+    <h2>Verbraucherstreitbeilegung</h2>
+    <p>Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <img src="HClogo.svg" alt="Hairconcept 110">
+    <div class="footer-links">
+      <a href="index.html#top">Startseite</a>
+      <a href="https://www.instagram.com/hairconcept110/?hl=de" target="_blank" rel="noopener">Instagram</a>
+      <a href="tel:+493319463318">Anrufen</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Hairconcept 110, Kuchen.</div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('mobileMenu');
+    function closeMenu(){
+      toggle.classList.remove('active');
+      menu.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    function openMenu(){
+      toggle.classList.add('active');
+      menu.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    toggle.addEventListener('click', function(){
+      if(menu.classList.contains('active')){ closeMenu(); } else { openMenu(); }
+    });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
+  })();
+
+  (function(){
+    var logoLinks = document.querySelectorAll('.nav-logo');
+    logoLinks.forEach(function(link){
+      link.addEventListener('click', function(){
+        var menu = document.getElementById('mobileMenu');
+        var toggle = document.getElementById('navToggle');
+        if(menu && menu.classList.contains('active')){
+          menu.classList.remove('active');
+          if(toggle){ toggle.classList.remove('active'); toggle.setAttribute('aria-expanded','false'); }
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  })();
+</script>
+
 </body>
 </html>
