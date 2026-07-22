@@ -37,14 +37,14 @@
   /* ---------- Nav ---------- */
   header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,12,10,0.72);backdrop-filter:blur(10px);}
   .header-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1rem var(--pad);max-width:var(--max);margin:0 auto;}
-  nav.main-nav{display:flex;gap:2rem;}
-  nav.main-nav a{text-decoration:none;font-size:0.85rem;color:var(--on-dark-soft);position:relative;padding-bottom:2px;transition:color .3s ease;}
+  nav.main-nav{display:flex;gap:1.7rem;}
+  nav.main-nav a{text-decoration:none;font-size:0.83rem;color:var(--on-dark-soft);position:relative;padding-bottom:2px;transition:color .3s ease;white-space:nowrap;}
   nav.main-nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--on-dark);transition:width .35s ease;}
   nav.main-nav a:hover{color:var(--on-dark);}
   nav.main-nav a:hover::after{width:100%;}
   .nav-logo{height:20px;width:auto;justify-self:center;}
   .nav-cta{justify-self:end;}
-  @media (max-width:860px){ nav.main-nav{display:none;} .header-inner{grid-template-columns:1fr auto;} }
+  @media (max-width:1024px){ nav.main-nav{display:none;} .header-inner{grid-template-columns:1fr auto;} }
 
   .btn{display:inline-block;font-size:0.92rem;text-decoration:none;padding:0.85rem 1.7rem;border:1px solid currentColor;cursor:pointer;transition:transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease;white-space:nowrap;font-weight:500;}
   .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.16);}
@@ -98,7 +98,7 @@
   .section-head .eyebrow{display:block;}
   .section-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-top:0.6rem;}
 
-  /* ---------- Team: breiterer Container, gr\u00f6\u00dfere Bilder ---------- */
+  /* ---------- Team ---------- */
   .team-wrap{max-width:1600px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
   .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;}
   @media (max-width:900px){ .team-grid{grid-template-columns:repeat(2,1fr);gap:1.75rem;} }
@@ -165,6 +165,8 @@
   .info-block{margin-bottom:1.5rem;}
   .info-block h4{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-faint);margin-bottom:0.4rem;}
   .info-block p{color:var(--ink-soft);line-height:1.7;}
+  .info-block p a{text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .3s ease;}
+  .info-block p a:hover{border-color:var(--ink);}
   .hours-row{display:flex;justify-content:space-between;max-width:280px;padding:0.35rem 0;font-size:0.92rem;border-bottom:1px dotted var(--line);}
   .hours-row.closed span:last-child{color:var(--ink-faint);}
 
@@ -187,19 +189,21 @@
 <header>
   <div class="header-inner">
     <nav class="main-nav">
+      <a href="#termin">Termin</a>
       <a href="#team">Team</a>
       <a href="#leistungen">Leistungen</a>
-      <a href="#newsha">Newsha</a>
+      <a href="#impressionen">Impressionen</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
     <img class="nav-logo" src="https://www.dropbox.com/scl/fi/hvdkxulivvf4c5xk11kr5/hairconcept110_Logo_wei.svg?rlkey=tsde97rg1z9tl6egzvqqbhyxj&raw=1" alt="Hairconcept 110">
     <div class="nav-cta">
-      <a href="https://www.google.com/maps/place/Hairconcept+110" target="_blank" rel="noopener" class="btn btn-fill">Online Termin</a>
+      <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Online Termin</a>
     </div>
   </div>
 </header>
 
 <div class="floating-cta" id="floatingCta">
-  <a href="https://www.google.com/maps/place/Hairconcept+110" target="_blank" rel="noopener" class="btn btn-fill">Termin buchen</a>
+  <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Termin buchen</a>
 </div>
 
 <main>
@@ -212,13 +216,13 @@
     <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
   </div>
 
-  <section class="cta-banner">
+  <section id="termin" class="cta-banner">
     <div class="wrap reveal">
       <span class="eyebrow">Terminvereinbarung</span>
       <h2>Ihr Termin, online in unter einer Minute.</h2>
       <p>Kein Anruf, keine Warteschleife — wählen Sie Ihre Leistung, Ihren Stylisten und Ihre Uhrzeit direkt online.</p>
       <div class="cta-btns">
-        <a href="https://www.google.com/maps/place/Hairconcept+110" target="_blank" rel="noopener" class="btn btn-fill">Online Termin buchen</a>
+        <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Online Termin buchen</a>
         <a href="tel:+493319463318" class="btn btn-line">Lieber anrufen</a>
       </div>
     </div>
@@ -314,7 +318,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="impressionen">
     <div class="gallery-wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Impressionen</span>
@@ -342,7 +346,7 @@
         <span class="eyebrow">Unser Partner</span>
         <h2>NEWSHA — Pflege für zuhause.</h2>
         <p>Die Produkte, die wir im Salon verwenden, gibt es jetzt auch für zuhause. Verlängern Sie Ihr Ergebnis mit den Pflegelinien, auf die auch wir vertrauen.</p>
-        <a href="https://www.newsha.com/" target="_blank" rel="noopener sponsored" class="btn btn-fill">Jetzt bei NEWSHA shoppen <span class="arrow">→</span></a>
+        <a href="https://www.newsha.de/shoppartner/24233" target="_blank" rel="noopener sponsored" class="btn btn-fill">Jetzt bei NEWSHA shoppen <span class="arrow">→</span></a>
         <p class="disclaimer">Affiliate-Link — als Partner von NEWSHA erhalten wir ggf. eine Provision, für Sie ändert sich am Preis nichts.</p>
       </div>
     </div>
@@ -354,12 +358,16 @@
         <span class="eyebrow">Termin</span>
         <h2>Wir freuen uns auf Sie.</h2>
         <div class="info-block">
-          <h4>Adresse</h4>
-          <p>Hauptstraße 110<br>73329 Kuchen</p>
-        </div>
-        <div class="info-block">
           <h4>Telefon</h4>
           <p><a href="tel:+493319463318">07331 9463318</a></p>
+        </div>
+        <div class="info-block">
+          <h4>Instagram</h4>
+          <p><a href="https://www.instagram.com/hairconcept110/?hl=de" target="_blank" rel="noopener">@hairconcept110</a></p>
+        </div>
+        <div class="info-block">
+          <h4>Adresse</h4>
+          <p><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47990bd16ef88547:0x281b06ef6a6d4129?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Hauptstraße 110<br>73329 Kuchen</a></p>
         </div>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Hauptstra%C3%9Fe+110,+73329+Kuchen" target="_blank" rel="noopener" class="btn btn-ink">Route planen</a>
       </div>
@@ -384,7 +392,7 @@
   <div class="footer-inner">
     <img src="https://www.dropbox.com/scl/fi/hvdkxulivvf4c5xk11kr5/hairconcept110_Logo_wei.svg?rlkey=tsde97rg1z9tl6egzvqqbhyxj&raw=1" alt="Hairconcept 110">
     <div class="footer-links">
-      <a href="https://www.instagram.com/hairconcept110/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/hairconcept110/?hl=de" target="_blank" rel="noopener">Instagram</a>
       <a href="tel:+493319463318">Anrufen</a>
     </div>
   </div>
