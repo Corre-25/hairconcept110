@@ -1,0 +1,170 @@
+backend:
+  name: github
+  repo: Corre-25/hairconcept110
+  branch: main
+  base_url: https://sveltia-cms-auth.c-altomare.workers.dev
+
+# Bilder landen im Repo-Root (dort liegen hero.png, sasa.png, foto1.png ...)
+media_folder: ""
+public_folder: ""
+
+locale: de
+
+collections:
+  - name: website
+    label: Website
+    icon: web
+    files:
+      # ======================================================
+      # EINE Datei = content.json, mit ALLEN Blöcken als Felder.
+      # So bleibt beim Speichern immer die komplette Datei erhalten.
+      # ======================================================
+      - name: inhalte
+        label: Alle Inhalte bearbeiten
+        file: content.json
+        icon: edit
+        fields:
+
+          # ---------- ALLGEMEIN ----------
+          - name: meta
+            label: "Allgemein (Titel & Logo)"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: siteTitle, label: "Seitentitel (Browser-Tab)", widget: string }
+              - { name: logo, label: "Logo", widget: image, required: false }
+
+          # ---------- HERO ----------
+          - name: hero
+            label: "Startbild (Hero)"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: image, label: "Hintergrundbild (Desktop)", widget: image }
+              - { name: imageMobile, label: "Hintergrundbild (Handy)", widget: image, required: false }
+
+          # ---------- TERMIN-BANNER ----------
+          - name: booking
+            label: "Termin-Banner"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - { name: text, label: "Text", widget: text }
+              - { name: primaryLabel, label: "Button-Text (Online buchen)", widget: string }
+              - { name: primaryUrl, label: "Buchungs-Link", widget: string }
+              - { name: secondaryLabel, label: "Button-Text (Telefon)", widget: string }
+              - { name: phone, label: "Telefonnummer (mit Ländervorwahl, z.B. +49...)", widget: string }
+
+          # ---------- ÜBER UNS ----------
+          - name: about
+            label: "Über uns"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - { name: paragraphs, label: "Absätze", widget: list, field: { name: text, label: "Absatz", widget: text } }
+              - { name: image, label: "Bild", widget: image }
+
+          # ---------- TEAM ----------
+          - name: team
+            label: "Team"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - name: members
+                label: "Team-Mitglieder"
+                label_singular: "Mitglied"
+                widget: list
+                fields:
+                  - { name: name, label: "Name", widget: string }
+                  - { name: role, label: "Rolle", widget: string }
+                  - { name: spec, label: "Spezialität", widget: string }
+                  - { name: image, label: "Foto", widget: image }
+
+          # ---------- LEISTUNGEN & PREISE ----------
+          - name: services
+            label: "Leistungen & Preise"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - { name: note, label: "Hinweis unter der Preisliste", widget: text }
+              - name: categories
+                label: "Kategorien"
+                label_singular: "Kategorie"
+                widget: list
+                fields:
+                  - { name: category, label: "Kategorie-Name", widget: string }
+                  - name: items
+                    label: "Einträge"
+                    label_singular: "Eintrag"
+                    widget: list
+                    fields:
+                      - { name: name, label: "Leistung", widget: string }
+                      - { name: price, label: "Preis", widget: string }
+
+          # ---------- GALERIE ----------
+          - name: gallery
+            label: "Galerie (Impressionen)"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - { name: images, label: "Bilder", widget: list, field: { name: image, label: "Bild", widget: image } }
+
+          # ---------- NEWSHA ----------
+          - name: newsha
+            label: "NEWSHA (Partner)"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - { name: text, label: "Text", widget: text }
+              - { name: buttonLabel, label: "Button-Text", widget: string }
+              - { name: buttonUrl, label: "Button-Link", widget: string }
+              - { name: disclaimer, label: "Hinweis (Affiliate)", widget: text }
+              - { name: image, label: "Bild", widget: image }
+
+          # ---------- KONTAKT ----------
+          - name: contact
+            label: "Kontakt"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: eyebrow, label: "Kleine Überschrift", widget: string }
+              - { name: title, label: "Titel", widget: string }
+              - { name: kicker, label: "Untertitel", widget: string }
+              - { name: phoneDisplay, label: "Telefon (Anzeige)", widget: string }
+              - { name: phone, label: "Telefon (mit +49...)", widget: string }
+              - { name: instagramHandle, label: "Instagram-Name (@...)", widget: string }
+              - { name: instagramUrl, label: "Instagram-Link", widget: string }
+              - { name: addressLine1, label: "Adresse Zeile 1", widget: string }
+              - { name: addressLine2, label: "Adresse Zeile 2", widget: string }
+              - { name: mapsUrl, label: "Google-Maps-Link", widget: string }
+              - { name: directionsUrl, label: "Routen-Link", widget: string }
+
+          # ---------- ÖFFNUNGSZEITEN ----------
+          - name: hours
+            label: "Öffnungszeiten"
+            widget: list
+            # Struktur geschützt: feste 7 Einträge, nur Werte änderbar
+            fields:
+              - { name: day, label: "Tag", widget: string }
+              - { name: time, label: "Zeit (oder 'Geschlossen')", widget: string }
+              - { name: closed, label: "Geschlossen?", widget: boolean, default: false }
+
+          # ---------- FOOTER ----------
+          - name: footer
+            label: "Fußzeile"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: copyright, label: "Copyright-Text", widget: string }
