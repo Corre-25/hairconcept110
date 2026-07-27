@@ -1,74 +1,91 @@
 {
-  "team": [
-    {
-      "name": "Sasa M.",
-      "role": "Inhaber & Hairstylist",
-      "spec": "Schnitt, Farbe & Typveränderung",
-      "image": "sasa.png"
-    },
-    {
-      "name": "Dejan V.",
-      "role": "Hairstylist",
-      "spec": "Herrenschnitt & Styling",
-      "image": "dejan.png"
-    },
-    {
-      "name": "Rafa",
-      "role": "Hairstylistin",
-      "spec": "Coloration & Balayage",
-      "image": "rafa.png"
-    },
-    {
-      "name": "Sarah",
-      "role": "Hairstylistin",
-      "spec": "Pflege & Naturlocken",
-      "image": "sarah.png"
-    }
-  ],
-  "services": [
-    {
-      "category": "Cut",
-      "items": [
-        { "name": "Clipper Cut", "price": "33,50 €" },
-        { "name": "Short Cut (kurzes Haar)", "price": "51,50 €" },
-        { "name": "Most Lengths (mittellang)", "price": "56,50 €" },
-        { "name": "Over Length (langes Haar)", "price": "61,50 €" },
-        { "name": "Under 14's", "price": "ab 24,50 €" },
-        { "name": "Bartstyling", "price": "ab 18 €" }
-      ]
-    },
-    {
-      "category": "Cut & Color",
-      "items": [
-        { "name": "Ansatzfarbe + Waschen + Schneiden + Föhnen", "price": "ab 102 €" }
-      ]
-    },
-    {
-      "category": "Color",
-      "items": [
-        { "name": "Farbe", "price": "ab 48,50 €" },
-        { "name": "Tönung", "price": "ab 34 €" },
-        { "name": "Glossing", "price": "ab 26 €" },
-        { "name": "Blondierung", "price": "ab 40,50 €" },
-        { "name": "Strähnen", "price": "ab 38 €" },
-        { "name": "Balayage", "price": "ab 80 €" }
-      ]
-    },
-    {
-      "category": "Perm",
-      "items": [
-        { "name": "Dauerwelle", "price": "ab 54 €" },
-        { "name": "Keratinglättung", "price": "ab 280 €" }
-      ]
-    }
-  ],
+  "meta": {
+    "siteTitle": "Hairconcept 110 — Friseursalon in Kuchen",
+    "logo": "HClogo.svg"
+  },
+  "hero": {
+    "image": "hero.png",
+    "imageMobile": "hero-mob.png"
+  },
+  "booking": {
+    "eyebrow": "Terminvereinbarung",
+    "title": "Ihr Termin, online in unter einer Minute.",
+    "text": "Kein Anruf, keine Warteschleife — wählen Sie Ihre Leistung, Ihren Stylisten und Ihre Uhrzeit direkt online.",
+    "primaryLabel": "Online Termin buchen",
+    "primaryUrl": "https://www.planity.com/de-DE/hairconcept-110-73329-kuchen",
+    "secondaryLabel": "Oder telefonisch",
+    "phone": "+493319463318"
+  },
+  "about": {
+    "eyebrow": "Was uns wichtig ist",
+    "title": "Mehr als ein Haarschnitt.",
+    "paragraphs": [
+      "Bei Hairconcept 110 sind wir mehr als ein Friseursalon — wir sind Ihr persönlicher Stilberater. Ob Damen-, Herren- oder Kinderhaarschnitt, Farbe oder Bartpflege in unserem hauseigenen Barbershop: Wir hören zu, beraten ehrlich und sagen auch mal, was nicht funktioniert — bevor wir schneiden oder färben.",
+      "Unsere helle, moderne Atmosphäre lädt zum Abschalten vom Alltag ein. Viele unserer Kundinnen und Kunden kommen seit Jahren zu uns — für uns das eigentliche Kompliment: nicht der einzelne Schnitt, sondern das Vertrauen, das daraus entsteht."
+    ],
+    "image": "about.png"
+  },
+  "team": {
+    "eyebrow": "Das Team",
+    "title": "Wer Ihr Haar in Händen hält",
+    "members": [
+      { "name": "Sasa M.", "role": "Inhaber & Hairstylist", "spec": "Schnitt, Farbe & Typveränderung", "image": "sasa.png" },
+      { "name": "Dejan V.", "role": "Hairstylist", "spec": "Herrenschnitt & Styling", "image": "dejan.png" },
+      { "name": "Rafa", "role": "Hairstylistin", "spec": "Coloration & Balayage", "image": "rafa.png" },
+      { "name": "Sarah", "role": "Hairstylistin", "spec": "Pflege & Naturlocken", "image": "sarah.png" }
+    ]
+  },
+  "services": {
+    "eyebrow": "Die Karte",
+    "title": "Leistungen & Preise",
+    "note": "Alle Preise verstehen sich als Richtwerte und variieren je nach Haarlänge und Aufwand.",
+    "categories": [
+      { "category": "Cut", "items": [ {"name":"Clipper Cut","price":"33,50 €"}, {"name":"Short Cut (kurzes Haar)","price":"51,50 €"}, {"name":"Most Lengths (mittellang)","price":"56,50 €"}, {"name":"Over Length (langes Haar)","price":"61,50 €"}, {"name":"Under 14's","price":"ab 24,50 €"}, {"name":"Bartstyling","price":"ab 18 €"} ] },
+      { "category": "Cut & Color", "items": [ {"name":"Ansatzfarbe + Waschen + Schneiden + Föhnen","price":"ab 102 €"} ] },
+      { "category": "Color", "items": [ {"name":"Farbe","price":"ab 48,50 €"}, {"name":"Tönung","price":"ab 34 €"}, {"name":"Glossing","price":"ab 26 €"}, {"name":"Blondierung","price":"ab 40,50 €"}, {"name":"Strähnen","price":"ab 38 €"}, {"name":"Balayage","price":"ab 80 €"} ] },
+      { "category": "Perm", "items": [ {"name":"Dauerwelle","price":"ab 54 €"}, {"name":"Keratinglättung","price":"ab 280 €"} ] }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Impressionen",
+    "title": "Unsere Arbeit",
+    "images": [
+      "foto1.png", "foto2.png", "foto3.png", "foto4.png", "foto5.png",
+      "foto6.png", "foto7.png", "foto8.png", "foto9.png", "foto10.png"
+    ]
+  },
+  "newsha": {
+    "eyebrow": "Unser Partner",
+    "title": "NEWSHA — Pflege für zuhause.",
+    "text": "Die Produkte, die wir im Salon verwenden, gibt es jetzt auch für zuhause. Verlängern Sie Ihr Ergebnis mit den Pflegelinien, auf die auch wir vertrauen.",
+    "buttonLabel": "Jetzt bei NEWSHA shoppen",
+    "buttonUrl": "https://www.newsha.de/shoppartner/24233",
+    "disclaimer": "Affiliate-Link — als Partner von NEWSHA erhalten wir ggf. eine Provision, für Sie ändert sich am Preis nichts.",
+    "image": "newsha.png"
+  },
+  "contact": {
+    "eyebrow": "Termin",
+    "title": "Wir freuen uns auf Sie.",
+    "kicker": "Ihr perfekter Look ist nur einen Termin entfernt.",
+    "phoneDisplay": "07331 9463318",
+    "phone": "+493319463318",
+    "instagramHandle": "@hairconcept110",
+    "instagramUrl": "https://www.instagram.com/hairconcept110/?hl=de",
+    "addressLine1": "Hauptstraße 110",
+    "addressLine2": "73329 Kuchen",
+    "mapsUrl": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47990bd16ef88547:0x281b06ef6a6d4129?sa=X&ved=1t:8290&ictx=111",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Hauptstra%C3%9Fe+110,+73329+Kuchen"
+  },
   "hours": [
-    { "day": "Montag", "time": "09:00–18:00", "closed": false },
-    { "day": "Dienstag", "time": "09:00–18:00", "closed": false },
-    { "day": "Mittwoch", "time": "Geschlossen", "closed": true },
-    { "day": "Donnerstag", "time": "09:00–18:00", "closed": false },
-    { "day": "Freitag", "time": "09:00–18:00", "closed": false },
-    { "day": "Samstag", "time": "09:00–14:00", "closed": false },
-    { "day": "Sonntag", "time": "Geschlossen", "closed": true }
-  ]
+    {"day":"Montag","time":"09:00–18:00","closed":false},
+    {"day":"Dienstag","time":"09:00–18:00","closed":false},
+    {"day":"Mittwoch","time":"Geschlossen","closed":true},
+    {"day":"Donnerstag","time":"09:00–18:00","closed":false},
+    {"day":"Freitag","time":"09:00–18:00","closed":false},
+    {"day":"Samstag","time":"09:00–14:00","closed":false},
+    {"day":"Sonntag","time":"Geschlossen","closed":true}
+  ],
+  "footer": {
+    "copyright": "© 2026 Hairconcept 110, Kuchen. Alle Preise verstehen sich als Richtwerte."
+  }
 }
