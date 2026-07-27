@@ -1,0 +1,74 @@
+{
+  "team": [
+    {
+      "name": "Sasa M.",
+      "role": "Inhaber & Hairstylist",
+      "spec": "Schnitt, Farbe & Typveränderung",
+      "image": "sasa.png"
+    },
+    {
+      "name": "Dejan V.",
+      "role": "Hairstylist",
+      "spec": "Herrenschnitt & Styling",
+      "image": "dejan.png"
+    },
+    {
+      "name": "Rafa",
+      "role": "Hairstylistin",
+      "spec": "Coloration & Balayage",
+      "image": "rafa.png"
+    },
+    {
+      "name": "Sarah",
+      "role": "Hairstylistin",
+      "spec": "Pflege & Naturlocken",
+      "image": "sarah.png"
+    }
+  ],
+  "services": [
+    {
+      "category": "Cut",
+      "items": [
+        { "name": "Clipper Cut", "price": "33,50 €" },
+        { "name": "Short Cut (kurzes Haar)", "price": "51,50 €" },
+        { "name": "Most Lengths (mittellang)", "price": "56,50 €" },
+        { "name": "Over Length (langes Haar)", "price": "61,50 €" },
+        { "name": "Under 14's", "price": "ab 24,50 €" },
+        { "name": "Bartstyling", "price": "ab 18 €" }
+      ]
+    },
+    {
+      "category": "Cut & Color",
+      "items": [
+        { "name": "Ansatzfarbe + Waschen + Schneiden + Föhnen", "price": "ab 102 €" }
+      ]
+    },
+    {
+      "category": "Color",
+      "items": [
+        { "name": "Farbe", "price": "ab 48,50 €" },
+        { "name": "Tönung", "price": "ab 34 €" },
+        { "name": "Glossing", "price": "ab 26 €" },
+        { "name": "Blondierung", "price": "ab 40,50 €" },
+        { "name": "Strähnen", "price": "ab 38 €" },
+        { "name": "Balayage", "price": "ab 80 €" }
+      ]
+    },
+    {
+      "category": "Perm",
+      "items": [
+        { "name": "Dauerwelle", "price": "ab 54 €" },
+        { "name": "Keratinglättung", "price": "ab 280 €" }
+      ]
+    }
+  ],
+  "hours": [
+    { "day": "Montag", "time": "09:00–18:00", "closed": false },
+    { "day": "Dienstag", "time": "09:00–18:00", "closed": false },
+    { "day": "Mittwoch", "time": "Geschlossen", "closed": true },
+    { "day": "Donnerstag", "time": "09:00–18:00", "closed": false },
+    { "day": "Freitag", "time": "09:00–18:00", "closed": false },
+    { "day": "Samstag", "time": "09:00–14:00", "closed": false },
+    { "day": "Sonntag", "time": "Geschlossen", "closed": true }
+  ]
+}
