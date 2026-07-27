@@ -211,8 +211,7 @@
     *{animation:none !important;transition:none !important;}
     .reveal{opacity:1 !important;transform:none !important;}
   }
-</style>
-</head>
+</style></head>
 <body>
 
 <header>
@@ -227,9 +226,9 @@
       <a href="#impressionen">Impressionen</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <img class="nav-logo" src="HClogo.svg" alt="Hairconcept 110">
+    <img class="nav-logo" id="navLogo" src="" alt="">
     <div class="nav-cta">
-      <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Online Termin</a>
+      <a href="#" id="navCtaBtn" target="_blank" rel="noopener" class="btn btn-fill">Online Termin</a>
     </div>
   </div>
 </header>
@@ -243,30 +242,30 @@
 </div>
 
 <div class="floating-cta" id="floatingCta">
-  <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Termin buchen</a>
+  <a href="#" id="floatingCtaBtn" target="_blank" rel="noopener" class="btn btn-fill">Termin buchen</a>
 </div>
 
 <main>
 
   <div class="hero">
     <picture>
-      <source media="(max-width: 700px)" srcset="hero-mob.png">
-      <img class="bg" src="hero.png" alt="Hairconcept 110 Salon" fetchpriority="high">
+      <source media="(max-width: 700px)" srcset="" id="heroMobSource">
+      <img class="bg" id="heroImg" src="" alt="" fetchpriority="high">
     </picture>
     <div class="hero-content">
-      <img class="logo" src="HClogo.svg" alt="Hairconcept 110">
+      <img class="logo" id="heroLogo" src="" alt="">
     </div>
     <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
   </div>
 
   <section id="termin" class="cta-banner">
     <div class="wrap reveal">
-      <span class="eyebrow">Terminvereinbarung</span>
-      <h2>Ihr Termin, online in unter einer Minute.</h2>
-      <p>Kein Anruf, keine Warteschleife — wählen Sie Ihre Leistung, Ihren Stylisten und Ihre Uhrzeit direkt online.</p>
+      <span class="eyebrow" id="bookingEyebrow"></span>
+      <h2 id="bookingTitle"></h2>
+      <p id="bookingText"></p>
       <div class="cta-btns">
-        <a href="https://www.planity.com/de-DE/hairconcept-110-73329-kuchen" target="_blank" rel="noopener" class="btn btn-fill">Online Termin buchen</a>
-        <a href="tel:+493319463318" class="btn btn-line">Oder telefonisch</a>
+        <a href="#" id="bookingPrimary" target="_blank" rel="noopener" class="btn btn-fill"></a>
+        <a href="#" id="bookingSecondary" class="btn btn-line"></a>
       </div>
     </div>
   </section>
@@ -274,70 +273,54 @@
   <section id="philosophie">
     <div class="philosophy reveal">
       <div class="philosophy-text">
-        <span class="eyebrow">Was uns wichtig ist</span>
-        <h2>Mehr als ein Haarschnitt.</h2>
-        <p>Bei Hairconcept 110 sind wir mehr als ein Friseursalon — wir sind Ihr persönlicher Stilberater. Ob Damen-, Herren- oder Kinderhaarschnitt, Farbe oder Bartpflege in unserem hauseigenen Barbershop: Wir hören zu, beraten ehrlich und sagen auch mal, was nicht funktioniert — bevor wir schneiden oder färben.</p>
-        <p>Unsere helle, moderne Atmosphäre lädt zum Abschalten vom Alltag ein. Viele unserer Kundinnen und Kunden kommen seit Jahren zu uns — für uns das eigentliche Kompliment: nicht der einzelne Schnitt, sondern das Vertrauen, das daraus entsteht.</p>
+        <span class="eyebrow" id="aboutEyebrow"></span>
+        <h2 id="aboutTitle"></h2>
+        <div id="aboutParagraphs"></div>
       </div>
-      <div class="philosophy-img"><img src="about.png" alt="Salon Detail" loading="lazy"></div>
+      <div class="philosophy-img"><img id="aboutImg" src="" alt="" loading="lazy"></div>
     </div>
   </section>
 
   <section id="team">
     <div class="team-wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Das Team</span>
-        <h2>Wer Ihr Haar in Händen hält</h2>
+        <span class="eyebrow" id="teamEyebrow"></span>
+        <h2 id="teamTitle"></h2>
       </div>
-      <div class="team-grid" id="teamGrid">
-        <!-- wird aus content.json befüllt -->
-      </div>
+      <div class="team-grid" id="teamGrid"></div>
     </div>
   </section>
 
   <section id="leistungen">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Die Karte</span>
-        <h2>Leistungen &amp; Preise</h2>
+        <span class="eyebrow" id="servicesEyebrow"></span>
+        <h2 id="servicesTitle"></h2>
       </div>
-      <div class="price-grid reveal" id="priceGrid">
-        <!-- wird aus content.json befüllt -->
-      </div>
-      <p class="price-note reveal">Alle Preise verstehen sich als Richtwerte und variieren je nach Haarlänge und Aufwand.</p>
+      <div class="price-grid reveal" id="priceGrid"></div>
+      <p class="price-note reveal" id="servicesNote"></p>
     </div>
   </section>
 
   <section id="impressionen">
     <div class="gallery-wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Impressionen</span>
-        <h2>Unsere Arbeit</h2>
+        <span class="eyebrow" id="galleryEyebrow"></span>
+        <h2 id="galleryTitle"></h2>
       </div>
-      <div class="gallery-grid reveal">
-        <div class="g-frame"><img src="foto1.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto2.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto3.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto4.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto5.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto6.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto7.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto8.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto9.png" alt="Frisur Ergebnis" loading="lazy"></div>
-        <div class="g-frame"><img src="foto10.png" alt="Frisur Ergebnis" loading="lazy"></div>
-      </div>
+      <div class="gallery-grid reveal" id="galleryGrid"></div>
     </div>
   </section>
 
   <section id="newsha" class="newsha">
     <div class="newsha-inner reveal">
-      <div class="newsha-img"><img src="newsha.png" alt="NEWSHA Produkte" loading="lazy"></div>
+      <div class="newsha-img"><img id="newshaImg" src="" alt="" loading="lazy"></div>
       <div class="newsha-text">
-        <span class="eyebrow">Unser Partner</span>
-        <h2>NEWSHA — Pflege für zuhause.</h2>
-        <p>Die Produkte, die wir im Salon verwenden, gibt es jetzt auch für zuhause. Verlängern Sie Ihr Ergebnis mit den Pflegelinien, auf die auch wir vertrauen.</p>
-        <a href="https://www.newsha.de/shoppartner/24233" target="_blank" rel="noopener sponsored" class="btn btn-fill">Jetzt bei NEWSHA shoppen <span class="arrow">→</span></a>
-        <p class="disclaimer">Affiliate-Link — als Partner von NEWSHA erhalten wir ggf. eine Provision, für Sie ändert sich am Preis nichts.</p>
+        <span class="eyebrow" id="newshaEyebrow"></span>
+        <h2 id="newshaTitle"></h2>
+        <p id="newshaText"></p>
+        <a href="#" id="newshaBtn" target="_blank" rel="noopener sponsored" class="btn btn-fill"></a>
+        <p class="disclaimer" id="newshaDisclaimer"></p>
       </div>
     </div>
   </section>
@@ -345,29 +328,27 @@
   <section id="kontakt">
     <div class="wrap contact-grid reveal">
       <div>
-        <span class="eyebrow">Termin</span>
-        <h2>Wir freuen uns auf Sie.</h2>
-        <p class="kicker">Ihr perfekter Look ist nur einen Termin entfernt.</p>
+        <span class="eyebrow" id="contactEyebrow"></span>
+        <h2 id="contactTitle"></h2>
+        <p class="kicker" id="contactKicker"></p>
         <div class="info-block">
           <h4>Telefon</h4>
-          <p><a href="tel:+493319463318">07331 9463318</a></p>
+          <p><a href="#" id="contactPhone"></a></p>
         </div>
         <div class="info-block">
           <h4>Instagram</h4>
-          <p><a href="https://www.instagram.com/hairconcept110/?hl=de" target="_blank" rel="noopener">@hairconcept110</a></p>
+          <p><a href="#" id="contactInstagram" target="_blank" rel="noopener"></a></p>
         </div>
         <div class="info-block">
           <h4>Adresse</h4>
-          <p><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47990bd16ef88547:0x281b06ef6a6d4129?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Hauptstraße 110<br>73329 Kuchen</a></p>
+          <p><a href="#" id="contactAddress" target="_blank" rel="noopener"></a></p>
         </div>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Hauptstra%C3%9Fe+110,+73329+Kuchen" target="_blank" rel="noopener" class="btn btn-ink">Route planen</a>
+        <a href="#" id="contactDirections" target="_blank" rel="noopener" class="btn btn-ink">Route planen</a>
       </div>
       <div>
         <div class="info-block">
           <h4>Öffnungszeiten</h4>
-          <div id="hoursList">
-            <!-- wird aus content.json befüllt -->
-          </div>
+          <div id="hoursList"></div>
         </div>
       </div>
     </div>
@@ -377,13 +358,13 @@
 
 <footer>
   <div class="footer-inner">
-    <img src="HClogo.svg" alt="Hairconcept 110">
+    <img id="footerLogo" src="" alt="">
     <div class="footer-links">
-      <a href="https://www.instagram.com/hairconcept110/?hl=de" target="_blank" rel="noopener">Instagram</a>
-      <a href="tel:+493319463318">Anrufen</a>
+      <a href="#" id="footerInstagram" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" id="footerPhone">Anrufen</a>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Hairconcept 110, Kuchen. Alle Preise verstehen sich als Richtwerte.</div>
+  <div class="footer-bottom" id="footerCopyright"></div>
 </footer>
 
 <div class="lightbox" id="lightbox">
@@ -392,170 +373,207 @@
     <img src="" alt="" id="lightboxImg">
   </div>
 </div>
-
 <script>
-  // ---------- Inhalte aus content.json laden und rendern ----------
-  // Kleiner Helfer: Text sicher escapen, damit z.B. & korrekt dargestellt wird
   function esc(str){
     return String(str == null ? '' : str)
-      .replace(/&/g,'&amp;')
-      .replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;')
-      .replace(/"/g,'&quot;');
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+  function setText(id, val){ var el = document.getElementById(id); if(el) el.textContent = (val == null ? '' : val); }
+  function setAttr(id, attr, val){ var el = document.getElementById(id); if(el) el.setAttribute(attr, (val == null ? '' : val)); }
+  function setSrc(id, val){ var el = document.getElementById(id); if(el) el.src = (val == null ? '' : val); }
 
-  function renderTeam(team){
-    var grid = document.getElementById('teamGrid');
-    if(!grid || !Array.isArray(team)) return;
-    grid.innerHTML = team.map(function(m){
-      return '<div class="team-card reveal">' +
-               '<div class="frame"><img src="' + esc(m.image) + '" alt="' + esc(m.name) + '" loading="lazy"></div>' +
-               '<h3>' + esc(m.name) + '</h3>' +
-               '<span class="role">' + esc(m.role) + '</span>' +
-               '<p class="spec">' + esc(m.spec) + '</p>' +
-             '</div>';
-    }).join('');
-  }
+  function render(d){
+    // --- Meta / Logo (3 Stellen) ---
+    if(d.meta){
+      if(d.meta.siteTitle) document.title = d.meta.siteTitle;
+      var logo = d.meta.logo || 'HClogo.svg';
+      ['navLogo','heroLogo','footerLogo'].forEach(function(id){ setSrc(id, logo); setAttr(id,'alt', d.meta.siteTitle || ''); });
+    }
 
-  function renderServices(services){
-    var grid = document.getElementById('priceGrid');
-    if(!grid || !Array.isArray(services)) return;
-    // Kategorien gleichmäßig auf zwei Spalten verteilen (wie im Original-Layout)
-    var mid = Math.ceil(services.length / 2);
-    var cols = [services.slice(0, mid), services.slice(mid)];
-    grid.innerHTML = cols.map(function(col){
-      return '<div>' + col.map(function(cat){
-        var rows = (cat.items || []).map(function(item){
-          return '<div class="price-row"><span class="name">' + esc(item.name) + '</span>' +
-                 '<span class="price">' + esc(item.price) + '</span></div>';
+    // --- Hero ---
+    if(d.hero){
+      setSrc('heroImg', d.hero.image);
+      setAttr('heroImg','alt', (d.meta && d.meta.siteTitle) || '');
+      if(d.hero.imageMobile) setAttr('heroMobSource','srcset', d.hero.imageMobile);
+    }
+
+    // --- Booking / Termin-Banner ---
+    if(d.booking){
+      setText('bookingEyebrow', d.booking.eyebrow);
+      setText('bookingTitle', d.booking.title);
+      setText('bookingText', d.booking.text);
+      setText('bookingPrimary', d.booking.primaryLabel);
+      setAttr('bookingPrimary','href', d.booking.primaryUrl);
+      setText('bookingSecondary', d.booking.secondaryLabel);
+      setAttr('bookingSecondary','href', 'tel:' + (d.booking.phone||''));
+      // Nav + Floating CTA teilen sich die Buchungs-URL
+      setAttr('navCtaBtn','href', d.booking.primaryUrl);
+      setAttr('floatingCtaBtn','href', d.booking.primaryUrl);
+    }
+
+    // --- About / Philosophie ---
+    if(d.about){
+      setText('aboutEyebrow', d.about.eyebrow);
+      setText('aboutTitle', d.about.title);
+      var ap = document.getElementById('aboutParagraphs');
+      if(ap && Array.isArray(d.about.paragraphs)){
+        ap.innerHTML = d.about.paragraphs.map(function(p){ return '<p>' + esc(p) + '</p>'; }).join('');
+      }
+      setSrc('aboutImg', d.about.image);
+      setAttr('aboutImg','alt', d.about.title || '');
+    }
+
+    // --- Team ---
+    if(d.team){
+      setText('teamEyebrow', d.team.eyebrow);
+      setText('teamTitle', d.team.title);
+      var tg = document.getElementById('teamGrid');
+      if(tg && Array.isArray(d.team.members)){
+        tg.innerHTML = d.team.members.map(function(m){
+          return '<div class="team-card reveal">' +
+                   '<div class="frame"><img src="' + esc(m.image) + '" alt="' + esc(m.name) + '" loading="lazy"></div>' +
+                   '<h3>' + esc(m.name) + '</h3>' +
+                   '<span class="role">' + esc(m.role) + '</span>' +
+                   '<p class="spec">' + esc(m.spec) + '</p>' +
+                 '</div>';
         }).join('');
-        return '<div class="price-cat"><h3>' + esc(cat.category) + '</h3>' + rows + '</div>';
-      }).join('') + '</div>';
-    }).join('');
+      }
+    }
+
+    // --- Services / Preise ---
+    if(d.services){
+      setText('servicesEyebrow', d.services.eyebrow);
+      setText('servicesTitle', d.services.title);
+      setText('servicesNote', d.services.note);
+      var pg = document.getElementById('priceGrid');
+      var cats = d.services.categories || [];
+      if(pg && Array.isArray(cats)){
+        var mid = Math.ceil(cats.length / 2);
+        var cols = [cats.slice(0, mid), cats.slice(mid)];
+        pg.innerHTML = cols.map(function(col){
+          return '<div>' + col.map(function(cat){
+            var rows = (cat.items || []).map(function(item){
+              return '<div class="price-row"><span class="name">' + esc(item.name) + '</span>' +
+                     '<span class="price">' + esc(item.price) + '</span></div>';
+            }).join('');
+            return '<div class="price-cat"><h3>' + esc(cat.category) + '</h3>' + rows + '</div>';
+          }).join('') + '</div>';
+        }).join('');
+      }
+    }
+
+    // --- Gallery ---
+    if(d.gallery){
+      setText('galleryEyebrow', d.gallery.eyebrow);
+      setText('galleryTitle', d.gallery.title);
+      var gg = document.getElementById('galleryGrid');
+      if(gg && Array.isArray(d.gallery.images)){
+        gg.innerHTML = d.gallery.images.map(function(src){
+          return '<div class="g-frame"><img src="' + esc(src) + '" alt="Frisur Ergebnis" loading="lazy"></div>';
+        }).join('');
+      }
+    }
+
+    // --- NEWSHA ---
+    if(d.newsha){
+      setText('newshaEyebrow', d.newsha.eyebrow);
+      setText('newshaTitle', d.newsha.title);
+      setText('newshaText', d.newsha.text);
+      var nb = document.getElementById('newshaBtn');
+      if(nb){ nb.innerHTML = esc(d.newsha.buttonLabel) + ' <span class="arrow">&rarr;</span>'; nb.setAttribute('href', d.newsha.buttonUrl || '#'); }
+      setText('newshaDisclaimer', d.newsha.disclaimer);
+      setSrc('newshaImg', d.newsha.image);
+      setAttr('newshaImg','alt', d.newsha.title || '');
+    }
+
+    // --- Contact ---
+    if(d.contact){
+      setText('contactEyebrow', d.contact.eyebrow);
+      setText('contactTitle', d.contact.title);
+      setText('contactKicker', d.contact.kicker);
+      setText('contactPhone', d.contact.phoneDisplay);
+      setAttr('contactPhone','href', 'tel:' + (d.contact.phone||''));
+      setText('contactInstagram', d.contact.instagramHandle);
+      setAttr('contactInstagram','href', d.contact.instagramUrl);
+      var ca = document.getElementById('contactAddress');
+      if(ca){ ca.innerHTML = esc(d.contact.addressLine1) + '<br>' + esc(d.contact.addressLine2); ca.setAttribute('href', d.contact.mapsUrl || '#'); }
+      setAttr('contactDirections','href', d.contact.directionsUrl);
+    }
+
+    // --- Hours ---
+    if(Array.isArray(d.hours)){
+      var hl = document.getElementById('hoursList');
+      if(hl){
+        hl.innerHTML = d.hours.map(function(h){
+          return '<div class="hours-row' + (h.closed ? ' closed' : '') + '">' +
+                   '<span>' + esc(h.day) + '</span><span>' + esc(h.time) + '</span>' +
+                 '</div>';
+        }).join('');
+      }
+    }
+
+    // --- Footer ---
+    if(d.footer){ setText('footerCopyright', d.footer.copyright); }
+    if(d.contact){
+      setAttr('footerInstagram','href', d.contact.instagramUrl);
+      setAttr('footerPhone','href', 'tel:' + (d.contact.phone||''));
+    }
   }
 
-  function renderHours(hours){
-    var list = document.getElementById('hoursList');
-    if(!list || !Array.isArray(hours)) return;
-    list.innerHTML = hours.map(function(h){
-      return '<div class="hours-row' + (h.closed ? ' closed' : '') + '">' +
-               '<span>' + esc(h.day) + '</span><span>' + esc(h.time) + '</span>' +
-             '</div>';
-    }).join('');
-  }
-
-  // reveal-Beobachter erst NACH dem Rendern starten, damit die neu
-  // eingefügten .reveal-Elemente (Team-Karten) auch erfasst werden
   function startReveal(){
     var els = document.querySelectorAll('.reveal');
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          obs.unobserve(entry.target);
-        }
+        if(entry.isIntersecting){ entry.target.classList.add('in-view'); obs.unobserve(entry.target); }
       });
     }, { threshold: 0.15 });
     els.forEach(function(el){ obs.observe(el); });
   }
 
+  function initLightbox(){
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+    var lightboxClose = document.getElementById('lightboxClose');
+    var galleryImgs = document.querySelectorAll('.gallery-grid img');
+    function openLightbox(src, alt){ lightboxImg.src = src; lightboxImg.alt = alt || ''; lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeLightbox(){ lightbox.classList.remove('active'); document.body.style.overflow = ''; }
+    galleryImgs.forEach(function(img){ img.addEventListener('click', function(){ openLightbox(img.getAttribute('src'), img.getAttribute('alt')); }); });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e){ if(e.target === lightbox){ closeLightbox(); } });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeLightbox(); } });
+  }
+
   fetch('content.json', { cache: 'no-cache' })
-    .then(function(res){
-      if(!res.ok) throw new Error('content.json HTTP ' + res.status);
-      return res.json();
-    })
-    .then(function(data){
-      renderTeam(data.team);
-      renderServices(data.services);
-      renderHours(data.hours);
-    })
-    .catch(function(err){
-      console.error('Inhalte konnten nicht geladen werden:', err);
-    })
+    .then(function(res){ if(!res.ok) throw new Error('content.json HTTP ' + res.status); return res.json(); })
+    .then(function(data){ render(data); })
+    .catch(function(err){ console.error('Inhalte konnten nicht geladen werden:', err); })
     .finally(function(){
-      // reveal immer starten – auch falls content.json fehlschlägt,
-      // sollen die statischen Sektionen sichtbar werden
+      // Galerie-Bilder existieren erst nach render() -> Lightbox danach initialisieren
+      initLightbox();
       startReveal();
     });
 
-  // ---------- Floating CTA ----------
+  // --- Floating CTA (unabhängig von content.json) ---
   (function(){
     var hero = document.querySelector('.hero');
     var floatingCta = document.getElementById('floatingCta');
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
-        if(!entry.isIntersecting){
-          floatingCta.classList.add('show');
-        } else {
-          floatingCta.classList.remove('show');
-        }
+        if(!entry.isIntersecting){ floatingCta.classList.add('show'); } else { floatingCta.classList.remove('show'); }
       });
     }, { threshold: 0 });
     obs.observe(hero);
   })();
 
-  // ---------- Mobile menu toggle ----------
+  // --- Mobile menu ---
   (function(){
     var toggle = document.getElementById('navToggle');
     var menu = document.getElementById('mobileMenu');
-
-    function closeMenu(){
-      toggle.classList.remove('active');
-      menu.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-    function openMenu(){
-      toggle.classList.add('active');
-      menu.classList.add('active');
-      toggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-
-    toggle.addEventListener('click', function(){
-      if(menu.classList.contains('active')){ closeMenu(); } else { openMenu(); }
-    });
-
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape'){ closeMenu(); }
-    });
-  })();
-
-  // ---------- Lightbox ----------
-  (function(){
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightboxImg');
-    var lightboxClose = document.getElementById('lightboxClose');
-    var galleryImgs = document.querySelectorAll('.gallery-grid img');
-
-    function openLightbox(src, alt){
-      lightboxImg.src = src;
-      lightboxImg.alt = alt || '';
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox(){
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    galleryImgs.forEach(function(img){
-      img.addEventListener('click', function(){
-        openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
-      });
-    });
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', function(e){
-      if(e.target === lightbox){ closeLightbox(); }
-    });
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape'){ closeLightbox(); }
-    });
+    function closeMenu(){ toggle.classList.remove('active'); menu.classList.remove('active'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    function openMenu(){ toggle.classList.add('active'); menu.classList.add('active'); toggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    toggle.addEventListener('click', function(){ if(menu.classList.contains('active')){ closeMenu(); } else { openMenu(); } });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
   })();
 </script>
 
